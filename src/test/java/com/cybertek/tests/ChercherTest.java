@@ -48,8 +48,8 @@ public class ChercherTest {
     @Test
     public void alertPresentTest(){
         // Click on "Click me, to Open an alert after 5 seconds"
-        WebElement initiateALert = driver.findElement(By.id("alert"));
-        initiateALert.click();
+        WebElement initiateAlert = driver.findElement(By.id("alert"));
+        initiateAlert.click();
 
         wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.alertIsPresent());
