@@ -61,8 +61,8 @@ public class DropdownTest {
 
 // Then select FamilyAlbum, make quantity 2, and click Calculate
         productDropdown.selectByVisibleText("FamilyAlbum");
-        WebElement quatityBox = driver.findElement(By.id("ctl00_MainContent_fmwOrder_txtQuantity"));
-        quatityBox.sendKeys("2");
+        WebElement quantityBox = driver.findElement(By.id("ctl00_MainContent_fmwOrder_txtQuantity"));
+        quantityBox.sendKeys("2");
 
         WebElement calculateButton = driver.findElement(By.cssSelector("input[type='submit']"));
         calculateButton.click();
