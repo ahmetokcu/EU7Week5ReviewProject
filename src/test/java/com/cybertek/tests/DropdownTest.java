@@ -71,7 +71,7 @@ public class DropdownTest {
 
         WebElement totalPriceElement = driver.findElement(By.id("ctl00_MainContent_fmwOrder_txtTotal"));
 
-        //    System.out.println("totalPriceElement.getText() = " + totalPriceElement.getText());
+        // System.out.println("totalPriceElement.getText() = " + totalPriceElement.getText());
         // will return nothing
         int actualPrice = Integer.parseInt(totalPriceElement.getAttribute("value"));
 
