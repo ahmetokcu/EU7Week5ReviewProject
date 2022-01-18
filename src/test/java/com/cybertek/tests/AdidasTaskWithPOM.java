@@ -4,6 +4,9 @@ import com.cybertek.pages.adidasPages.BasePageForAdidas;
 import com.cybertek.pages.adidasPages.CartPage;
 import com.cybertek.pages.adidasPages.ProductPage;
 import com.cybertek.tests.TestBaseTwo;
+import org.openqa.selenium.By;
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 public class AdidasTaskWithPOM extends TestBaseTwo {
@@ -13,9 +16,7 @@ public class AdidasTaskWithPOM extends TestBaseTwo {
     CartPage cartPage = new CartPage();
 
     @Test
-    public void PurchaseTest(){
-
-
+    public void PurchaseTest() throws InterruptedException {
 
         // Navigate to "Laptop" → "Sony vaio i5" and click on "Add to cart". Accept pop up confirmation.
         expectedPurchaseAmount += productPage.productAdder("Laptop","Sony vaio i5");
@@ -35,6 +36,9 @@ public class AdidasTaskWithPOM extends TestBaseTwo {
         // need to fill up the form, I want to create a method that fills up the form
         cartPage.fillForm();
 
+
+
+
         /*
         • Click on "Purchase"
         • Capture and log purchase Id and Amount.
@@ -47,6 +51,4 @@ public class AdidasTaskWithPOM extends TestBaseTwo {
         // System.out.println("productPage.priceElement.getText() = " + productPage.priceElement.getText());
         // System.out.println("productPage.productDescription.getText() = " + productPage.productDescription.getText());
     }
-
-
 }

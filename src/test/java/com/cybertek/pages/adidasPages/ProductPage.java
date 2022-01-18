@@ -15,3 +15,5 @@ public class ProductPage extends BasePageForAdidas{
     public WebElement productDescription;
 
 }
+
+

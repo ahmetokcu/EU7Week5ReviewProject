@@ -2,13 +2,16 @@ package com.cybertek.pages.adidasPages;
 
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 public class CartPage extends BasePageForAdidas{
-//    public CartPage(){
-//        super();
-//    }  No need to call parent constructor, because it is already called
+    WebDriver driver;
+    // public CartPage(){
+    // super();
+    // }  No need to call parent constructor, because it is already called
 
     @FindBy(css = "button[class='btn btn-success']")
     public WebElement placeOrderButton;
@@ -24,6 +27,9 @@ public class CartPage extends BasePageForAdidas{
     public WebElement month;
     @FindBy(id = "year")
     public WebElement year;
+    @FindBy(css = "button[onclick='purchaseOrder()']")
+    public WebElement purchase;
+
 
 
 
@@ -35,8 +41,8 @@ public class CartPage extends BasePageForAdidas{
         card.sendKeys(faker.finance().creditCard());
         month.sendKeys(""+faker.number().numberBetween(1,12));
         year.sendKeys(""+faker.number().numberBetween(2022,2025));
+        purchase.click();
 
     }
-
-
 }
+
